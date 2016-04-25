@@ -1,6 +1,7 @@
 #Compiler macors
 CC=mpic++
-
+FLAGS=-std=c++11
+# --showme
 #Includes
 IN_MPI=-I /usr/include/mpi
 INBOOST=-I /usr/include/boost 
@@ -16,4 +17,4 @@ SRC=source_files
 OUT=out
 
 boost: $(BST)/*
-	$(CC) $(SRC)/main.cpp -o $(OUT)/program-boost  $(INBOOST)  -lboost_mpi -lboost_serialization	
+	$(CC) $(SRC)/main.cpp -o $(OUT)/program-boost  $(INBOOST)  -lboost_mpi -lboost_serialization $(FLAGS)
